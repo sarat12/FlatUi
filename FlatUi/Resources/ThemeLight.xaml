@@ -1,0 +1,25 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <!--Background-->
+    <SolidColorBrush x:Key="InactiveBackground" Color="#F9F9F9"/>
+    <SolidColorBrush x:Key="ActiveBackground" Color="#FFFFFF"/>
+
+    <!--Foreground-->
+    <SolidColorBrush x:Key="Foreground" Color="#333333"/>
+    <SolidColorBrush x:Key="InactiveForeground" Color="#777777"/>
+    <SolidColorBrush x:Key="InvertedForeground" Color="#FFFFFF"/>
+
+    <!--General-->
+    <SolidColorBrush x:Key="BackgroundHighlighted" Color="#DDDDDD"/>
+    <SolidColorBrush x:Key="BorderBrushHighlighted" Color="#555555"/>
+    <SolidColorBrush x:Key="BackgroundSelected" Color="#007ACC"/>
+    <SolidColorBrush x:Key="BorderBrushSelected" Color="#1C97EA"/>
+    <SolidColorBrush x:Key="BackgroundNormal" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="BorderBrushNormal" Color="#AAAAAA"/>
+
+    <!--Text Box-->
+    <SolidColorBrush x:Key="TextBoxBackground" Color="#FFFFFF"/>
+    <SolidColorBrush x:Key="TextBoxBackgroundSelected" Color="#FFFFFF"/>
+
+</ResourceDictionary>

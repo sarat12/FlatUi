@@ -1,0 +1,50 @@
+﻿<UserControl x:Class="FlatUi.Controls.WindowStripe"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d" 
+             d:DesignHeight="300" d:DesignWidth="300" Height="25">
+    <Grid>
+        <Rectangle Fill="{StaticResource BackgroundSelected}" HorizontalAlignment="Stretch" Height="25" VerticalAlignment="Top" PreviewMouseDown="Rectangle_PreviewMouseDown" />
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Width="35" Style="{StaticResource ChromeButton}" Click="BtnCloseClick">
+            <Viewbox 
+                Width="16" 
+                Height="16" 
+                Margin="0">
+                <Path 
+                    SnapsToDevicePixels="False" 
+                    Fill="{StaticResource InvertedForeground}"
+                    StrokeThickness="0"
+                    Stretch="Fill"
+                    Data="F1 M 26.9166,22.1667L 37.9999,33.25L 49.0832,22.1668L 53.8332,26.9168L 42.7499,38L 53.8332,49.0834L 49.0833,53.8334L 37.9999,42.75L 26.9166,53.8334L 22.1666,49.0833L 33.25,38L 22.1667,26.9167L 26.9166,22.1667 Z " />
+            </Viewbox>
+        </Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,35,0" Width="35" Style="{StaticResource ChromeButton}" Click="BtnMaxClick">
+            <Viewbox 
+                Width="16" 
+                Height="16" 
+                Margin="0">
+                <Path 
+                    SnapsToDevicePixels="False" 
+                    Fill="{StaticResource InvertedForeground}"
+                    StrokeThickness="0"
+                    Stretch="Fill"
+                    Data="F1 M 43,48L 46,48L 46,57L 19,57L 19,34L 32,34L 32,40L 22,40L 22,54L 43,54L 43,48 Z M 21,19L 57,19L 57,50L 49,50L 49,46L 53,46L 53,27L 25,27L 25,32L 21,32L 21,19 Z M 37.75,30L 50,30L 50,42.25L 46,46.25L 46,37.25L 38,45.25L 34.75,42L 42.75,34L 33.75,34L 37.75,30 Z " />
+            </Viewbox>
+        </Button>
+        <Button HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,0,70,0" Width="35" Style="{StaticResource ChromeButton}" Click="BtnMinClick">
+            <Viewbox 
+                Width="16" 
+                Height="16"  VerticalAlignment="Bottom"
+                Margin="0">
+                <Path 
+                    SnapsToDevicePixels="False" 
+                    Fill="{StaticResource InvertedForeground}"
+                    StrokeThickness="0"
+                    Stretch="Fill"
+                    Data="F1 M 19,38L 57,38L 57,44L 19,44L 19,38 Z "/>
+            </Viewbox>
+        </Button>
+    </Grid>
+</UserControl>

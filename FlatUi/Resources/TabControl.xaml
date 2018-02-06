@@ -1,0 +1,59 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="ThemeLight.xaml"/>
+    </ResourceDictionary.MergedDictionaries>
+
+    <Style TargetType="{x:Type TabControl}">
+        <Style.Resources>
+            <Style TargetType="{x:Type TabItem}">
+                <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+                <Setter Property="Background" Value="{StaticResource ActiveBackground}"/>
+                <Setter Property="Template">
+                    <Setter.Value>
+                        <ControlTemplate TargetType="{x:Type TabItem}">
+                            <Label Name="Cont" Margin="0,0,0,1" BorderThickness="0" Height="23" Width="auto" Background="{TemplateBinding Background}" Foreground="{StaticResource Foreground}" VerticalContentAlignment="Center">
+                                <ContentPresenter ContentSource="Header" Margin="10,0,10,0" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                            </Label>
+                            <ControlTemplate.Triggers>
+                                <Trigger Property="IsMouseOver" Value="true">
+                                    <Setter Property="Background" Value="{StaticResource BorderBrushSelected}"/>
+                                    <Setter TargetName="Cont" Property="Foreground" Value="{StaticResource InvertedForeground}"/>
+                                </Trigger>
+                                <Trigger Property="IsSelected" Value="true">
+                                    <Setter Property="Background" Value="{StaticResource BackgroundSelected}"/>
+                                    <Setter TargetName="Cont" Property="Foreground" Value="{StaticResource InvertedForeground}"/>
+                                </Trigger>
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
+        </Style.Resources>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type TabControl}">
+                    <Border Background="{TemplateBinding Background}" Margin="{TemplateBinding Padding}">
+                        <Grid KeyboardNavigation.TabNavigation="Local">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                            <Border Background="Transparent" BorderThickness="0,0,0,3" 
+                                    BorderBrush="{StaticResource BackgroundSelected}">
+                                <TabPanel Name="HeaderPanel" Panel.ZIndex="1" Margin="0,0,4,-1" 
+                                    IsItemsHost="True" KeyboardNavigation.TabIndex="1"/>
+                            </Border>
+                            <Border Grid.Row="1" Background="Transparent"/>
+                            <ContentPresenter Grid.Row="1" Name="PART_SelectedContentHost" 
+                                              ContentSource="SelectedContent"/>
+                        </Grid>
+                    </Border>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+        <Setter Property="Background" Value="{StaticResource ActiveBackground}"/>
+    </Style>
+
+</ResourceDictionary>
